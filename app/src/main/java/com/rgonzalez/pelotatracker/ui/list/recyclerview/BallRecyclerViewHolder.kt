@@ -10,6 +10,8 @@ class BallRecyclerViewHolder(private val binding: BallItemBinding, private val c
     fun bind(ball: BallModel, clickListener: (BallModel) -> Unit) {
         binding.ballTypeText.text = ball.type
         binding.ballColorText.text = ball.color
+        val resId = context.resources.getIdentifier("${ball.color}_ball", "drawable", context.packageName)
+        binding.ballImg.setImageResource(resId)
         binding.cardBallItem.setOnClickListener{
             clickListener(ball)
         }

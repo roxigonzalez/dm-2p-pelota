@@ -50,20 +50,20 @@ class BallListFragment : Fragment() {
         }
     }
 
-    private fun showSelectedIem(ball: BallModel) {
+    private fun showSelectedItem(ball: BallModel) {
         ballsViewModel.setBallModel(ball)
         findNavController().navigate(R.id.action_ballListFragment_to_ballFragment)
     }
-    private fun displayCats() {
+    private fun displayBalls() {
         recyclerViewAdapter.setData(ballsViewModel.getBalls())
         recyclerViewAdapter.notifyDataSetChanged()
     }
     private fun setRecyclerView(view: View) {
         binding.recyclerViewBall.layoutManager = LinearLayoutManager(view.context)
         recyclerViewAdapter = BallRecyclerViewAdapter{ selectedBall ->
-            showSelectedIem(selectedBall)
+            showSelectedItem(selectedBall)
         }
         binding.recyclerViewBall.adapter = recyclerViewAdapter
-        displayCats()
+        displayBalls()
     }
 }

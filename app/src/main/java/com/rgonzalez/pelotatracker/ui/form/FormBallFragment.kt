@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.rgonzalez.pelotatracker.R
 import com.rgonzalez.pelotatracker.databinding.FragmentFormBallBinding
 
 class FormBallFragment : Fragment() {
@@ -23,7 +25,10 @@ class FormBallFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFormBallBinding.inflate(inflater, container, false)
-
+        val items =listOf(getString(R.string.black), getString(R.string.white), getString(R.string.green), getString(
+            R.string.gray), getString(R.string.yellow))
+        val adapter = ArrayAdapter(this.requireContext(), R.layout.item_list_colors, items )
+        binding.ageList.setAdapter(adapter)
         return binding.root
     }
 

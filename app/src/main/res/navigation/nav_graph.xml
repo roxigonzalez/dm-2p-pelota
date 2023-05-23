@@ -8,8 +8,10 @@
         android:id="@+id/ballListFragment"
         android:name="com.rgonzalez.pelotatracker.ui.list.BallListFragment"
         android:label="@string/ball_list" >
+
         <action
             android:id="@+id/action_ballListFragment_to_ballFragment"
+
             app:destination="@id/ballFragment" />
         <action
             android:id="@+id/action_ballListFragment_to_formBallFragment"

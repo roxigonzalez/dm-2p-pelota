@@ -8,4 +8,5 @@
     <dimen name="img_with">100dp</dimen>
     <dimen name="img_width">100dp</dimen>
     <dimen name="big_padding">20dp</dimen>
+    <dimen name="img_size">200dp</dimen>
 </resources>

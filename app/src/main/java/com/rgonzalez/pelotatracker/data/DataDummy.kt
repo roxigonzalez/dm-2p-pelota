@@ -3,8 +3,8 @@ package com.rgonzalez.pelotatracker.data
 import com.rgonzalez.pelotatracker.data.model.BallModel
 
 var balls = mutableListOf<BallModel>(
-    BallModel("soccer", "white"),
+    BallModel("soccer", "green"),
     BallModel("basketball", "black"),
-    BallModel("volleyball", "white"),
+    BallModel("volleyball", "orange"),
     BallModel("american fut boll", "white")
 )

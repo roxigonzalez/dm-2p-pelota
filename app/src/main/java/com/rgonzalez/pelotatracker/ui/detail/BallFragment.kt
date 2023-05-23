@@ -1,6 +1,7 @@
 package com.rgonzalez.pelotatracker.ui.detail
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -31,8 +32,14 @@ class BallFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        super.onViewCreated(view, savedInstanceState)
+        val ballModelFromList = ballsViewModel.getBallModel()
+        ballModelFromList.value?.let { ballViewModel.setBallModel(it) }
+        binding.viewmodel = ballViewModel
+        val context = view.context
+        val resId = context.resources.getIdentifier("${ballViewModel.color.value}_ball", "drawable", context.packageName)
+        binding.detailImgBall.setImageResource(resId)
+        Log.d("TAG",  "${ballModelFromList.value.toString()}")
     }
-
 
 }
