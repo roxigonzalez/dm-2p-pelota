@@ -6,5 +6,5 @@ var balls = mutableListOf<PelotaModel>(
     PelotaModel("soccer", "white"),
     PelotaModel("basketball", "black"),
     PelotaModel("volleyball", "white"),
-    PelotaModel("", "white")
+    PelotaModel("american fut boll", "white")
 )
