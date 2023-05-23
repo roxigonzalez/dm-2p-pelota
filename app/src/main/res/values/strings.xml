@@ -16,4 +16,5 @@
     <string name="form_ball">Create new ball</string>
     <string name="ball_img">Ball IMG</string>
     <string name="color">Color</string>
+    <string name="ball">Ball</string>
 </resources>
