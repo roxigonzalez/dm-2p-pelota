@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PelotaTracker</string>
+    <string name="type">Type</string>
+    <string name="NewBall">New Ball</string>
+    <string name="choose_color">Choose color</string>
+    <string name="save">Save</string>
+    <string name="black">black</string>
+    <string name="white">white</string>
+    <string name="brown">brown</string>
+    <string name="gray">gray</string>
+    <string name="yellow">yellow</string>
+    <string name="balls">Balls</string>
 </resources>

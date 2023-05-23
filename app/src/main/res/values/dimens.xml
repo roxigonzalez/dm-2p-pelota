@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleTextSize">24sp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="medium_padding">8dp</dimen>
+    <dimen name="line_spacing_extra">5sp</dimen>
+    <dimen name="border_radius">8dp</dimen>
+    <dimen name="img_with">100dp</dimen>
+    <dimen name="img_width">100dp</dimen>
+</resources>

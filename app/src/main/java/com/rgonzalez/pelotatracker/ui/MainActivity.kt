@@ -1,7 +1,8 @@
-package com.rgonzalez.pelotatracker
+package com.rgonzalez.pelotatracker.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rgonzalez.pelotatracker.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
