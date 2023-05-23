@@ -10,4 +10,7 @@
     <string name="gray">gray</string>
     <string name="yellow">yellow</string>
     <string name="balls">Balls</string>
+    <string name="ball_list">Ball List</string>
+    <string name="ball_detail">Ball Detail</string>
+    <string name="form_ball">Create new ball</string>
 </resources>

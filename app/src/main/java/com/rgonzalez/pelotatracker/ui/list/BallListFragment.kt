@@ -1,4 +1,4 @@
-package com.rgonzalez.cattracker.ui.list
+package com.rgonzalez.pelotatracker.ui.list
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.rgonzalez.cattracker.ui.list.recyclerview.CatRecyclerViewAdapter
+import com.rgonzalez.pelotatracker.R
+import com.rgonzalez.pelotatracker.data.balls
+import com.rgonzalez.pelotatracker.data.model.BallModel
+import com.rgonzalez.pelotatracker.databinding.FragmentBallListBinding
+import com.rgonzalez.pelotatracker.ui.list.recyclerview.BallRecyclerViewAdapter
 
 class BallListFragment : Fragment() {
 
@@ -19,4 +23,47 @@ class BallListFragment : Fragment() {
         BallsViewModel.Factory
     }
 
+    private lateinit var binding: FragmentBallListBinding
+    private lateinit var btnNewBall: FloatingActionButton
+    private lateinit var recyclerViewAdapter: BallRecyclerViewAdapter
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentBallListBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setRecyclerView(view)
+        btnNewBall = view.findViewById(R.id.add_ball_button)
+        createNewCatListener()
+    }
+
+    private fun createNewCatListener(){
+        btnNewBall.setOnClickListener{
+            findNavController().navigate(R.id.action_ballListFragment_to_formBallFragment)
+        }
+    }
+
+    private fun showSelectedIem(ball: BallModel) {
+        ballsViewModel.setBallModel(ball)
+        findNavController().navigate(R.id.action_ballListFragment_to_ballFragment)
+    }
+    private fun displayCats() {
+        recyclerViewAdapter.setData(ballsViewModel.getBalls())
+        recyclerViewAdapter.notifyDataSetChanged()
+    }
+    private fun setRecyclerView(view: View) {
+        binding.recyclerViewBall.layoutManager = LinearLayoutManager(view.context)
+        recyclerViewAdapter = BallRecyclerViewAdapter{ selectedBall ->
+            showSelectedIem(selectedBall)
+        }
+        binding.recyclerViewBall.adapter = recyclerViewAdapter
+        displayCats()
+    }
 }

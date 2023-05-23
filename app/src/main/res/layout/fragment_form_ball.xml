@@ -7,13 +7,13 @@
 
         <variable
             name="viewmodel"
-            type="com.rgonzalez.cattracker.ui.form.FormCatViewModel" />
+            type="com.rgonzalez.pelotatracker.ui.form.FormBallViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.form.FormCatFragment">
+        tools:context=".ui.form.FormBallFragment">
 
         <TextView
             android:id="@+id/name_form_title"
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/medium_margin"
-            android:text="@string/new_kitty"
+            android:text="@string/NewBall"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,14 +31,14 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name"
+            android:hint="@string/type"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name_form_title">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@={viewmodel.name}"
+                android:text="@={viewmodel.type}"
 
                 />
 
@@ -64,35 +64,15 @@
                 tools:ignore="LabelFor" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/age"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textColorTextLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:text="@={viewmodel.age}"
-
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{ () -> viewmodel.createCat() }"
-            android:text="@string/button"
+            android:onClick="@{ () -> viewmodel.createBall() }"
+            android:text="@string/save"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/outlinedTextField" />
+            app:layout_constraintTop_toBottomOf="@id/textColorTextLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

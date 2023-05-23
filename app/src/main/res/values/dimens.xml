@@ -7,4 +7,5 @@
     <dimen name="border_radius">8dp</dimen>
     <dimen name="img_with">100dp</dimen>
     <dimen name="img_width">100dp</dimen>
+    <dimen name="big_padding">20dp</dimen>
 </resources>
