@@ -1,10 +1,10 @@
 package com.rgonzalez.pelotatracker.data
 
-import com.rgonzalez.pelotatracker.data.model.PelotaModel
+import com.rgonzalez.pelotatracker.data.model.BallModel
 
-var balls = mutableListOf<PelotaModel>(
-    PelotaModel("soccer", "white"),
-    PelotaModel("basketball", "black"),
-    PelotaModel("volleyball", "white"),
-    PelotaModel("american fut boll", "white")
+var balls = mutableListOf<BallModel>(
+    BallModel("soccer", "white"),
+    BallModel("basketball", "black"),
+    BallModel("volleyball", "white"),
+    BallModel("american fut boll", "white")
 )
