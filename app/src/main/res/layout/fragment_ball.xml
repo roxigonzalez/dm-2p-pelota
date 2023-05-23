@@ -19,15 +19,14 @@
 
         <ImageView
             android:id="@+id/detail_img_ball"
-            android:contentDescription="@string/ball_img"
             android:layout_width="@dimen/img_size"
             android:layout_height="@dimen/img_size"
+            android:contentDescription="@string/ball_img"
             android:src="@drawable/ball1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/detail_ball_name"
@@ -38,6 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detail_img_ball"
             tools:text="@string/type" />
+
         <TextView
             android:id="@+id/detail_ball_txt"
             android:layout_width="wrap_content"
@@ -57,6 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detail_ball_txt" />
+
         <TextView
             android:id="@+id/detail_color_ball_txt"
             android:layout_width="wrap_content"

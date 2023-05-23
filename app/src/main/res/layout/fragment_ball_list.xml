@@ -40,9 +40,9 @@
             android:id="@+id/add_ball_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/cool_violet"
             android:shadowColor="@color/gray"
             android:src="@drawable/baseline_add_circle_outline_24"
-            android:backgroundTint="@color/cool_violet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

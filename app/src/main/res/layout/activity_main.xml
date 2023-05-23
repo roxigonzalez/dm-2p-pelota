@@ -10,14 +10,13 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_ball_list"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        app:defaultNavHost="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:defaultNavHost="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_ball_list"
         app:navGraph="@navigation/nav_graph"
-        />
+        tools:layout="@layout/fragment_ball_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

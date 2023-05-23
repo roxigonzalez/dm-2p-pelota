@@ -37,9 +37,13 @@ class BallFragment : Fragment() {
         ballModelFromList.value?.let { ballViewModel.setBallModel(it) }
         binding.viewmodel = ballViewModel
         val context = view.context
-        val resId = context.resources.getIdentifier("${ballViewModel.color.value}_ball", "drawable", context.packageName)
+        val resId = context.resources.getIdentifier(
+            "${ballViewModel.color.value}_ball",
+            "drawable",
+            context.packageName
+        )
         binding.detailImgBall.setImageResource(resId)
-        Log.d("TAG",  "${ballModelFromList.value.toString()}")
+        Log.d("TAG", "${ballModelFromList.value.toString()}")
     }
 
 }

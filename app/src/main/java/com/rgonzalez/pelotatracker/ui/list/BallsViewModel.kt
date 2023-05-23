@@ -11,7 +11,7 @@ import com.rgonzalez.pelotatracker.data.model.BallModel
 import com.rgonzalez.pelotatracker.repositories.BallRepository
 
 
-class BallsViewModel(private val repository: BallRepository):ViewModel() {
+class BallsViewModel(private val repository: BallRepository) : ViewModel() {
     private val catModelLiveData = MutableLiveData<BallModel>()
 
     fun getBalls() = repository.getBalls()
@@ -19,9 +19,11 @@ class BallsViewModel(private val repository: BallRepository):ViewModel() {
     fun setBallModel(ballModel: BallModel) {
         catModelLiveData.value = ballModel
     }
+
     fun getBallModel(): LiveData<BallModel> {
         return catModelLiveData
     }
+
     companion object {
         val Factory = viewModelFactory {
             initializer {

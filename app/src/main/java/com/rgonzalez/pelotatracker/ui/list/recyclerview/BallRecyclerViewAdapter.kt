@@ -8,7 +8,7 @@ import com.rgonzalez.pelotatracker.databinding.BallItemBinding
 
 class BallRecyclerViewAdapter(
     private val clickListener: (BallModel) -> Unit
-): RecyclerView.Adapter<BallRecyclerViewHolder>() {
+) : RecyclerView.Adapter<BallRecyclerViewHolder>() {
 
     private val balls = ArrayList<BallModel>()
 
@@ -18,7 +18,7 @@ class BallRecyclerViewAdapter(
     }
 
     override fun getItemCount(): Int {
-       return balls.size
+        return balls.size
     }
 
     override fun onBindViewHolder(holder: BallRecyclerViewHolder, position: Int) {

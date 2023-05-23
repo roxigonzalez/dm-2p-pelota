@@ -20,7 +20,7 @@ class FormBallViewModel(private val repository: BallRepository) : ViewModel() {
     fun addBall(ball: BallModel) = repository.addBall(ball)
 
     fun createBall() {
-        if(!validateBallData()) {
+        if (!validateBallData()) {
             status.value = WRONG_DATA
             return
         }
@@ -52,12 +52,13 @@ class FormBallViewModel(private val repository: BallRepository) : ViewModel() {
 
         return true
     }
+
     companion object {
         val Factory = viewModelFactory {
-           initializer {
-               val app = this[APPLICATION_KEY] as BallReviewerApplication
-               FormBallViewModel(app.ballRepository)
-           }
+            initializer {
+                val app = this[APPLICATION_KEY] as BallReviewerApplication
+                FormBallViewModel(app.ballRepository)
+            }
         }
 
         const val BALL_CREATED = "created"

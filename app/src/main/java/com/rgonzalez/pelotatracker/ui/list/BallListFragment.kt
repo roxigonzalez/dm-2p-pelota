@@ -44,8 +44,8 @@ class BallListFragment : Fragment() {
         createNewCatListener()
     }
 
-    private fun createNewCatListener(){
-        btnNewBall.setOnClickListener{
+    private fun createNewCatListener() {
+        btnNewBall.setOnClickListener {
             findNavController().navigate(R.id.action_ballListFragment_to_formBallFragment)
         }
     }
@@ -54,13 +54,15 @@ class BallListFragment : Fragment() {
         ballsViewModel.setBallModel(ball)
         findNavController().navigate(R.id.action_ballListFragment_to_ballFragment)
     }
+
     private fun displayBalls() {
         recyclerViewAdapter.setData(ballsViewModel.getBalls())
         recyclerViewAdapter.notifyDataSetChanged()
     }
+
     private fun setRecyclerView(view: View) {
         binding.recyclerViewBall.layoutManager = LinearLayoutManager(view.context)
-        recyclerViewAdapter = BallRecyclerViewAdapter{ selectedBall ->
+        recyclerViewAdapter = BallRecyclerViewAdapter { selectedBall ->
             showSelectedItem(selectedBall)
         }
         binding.recyclerViewBall.adapter = recyclerViewAdapter

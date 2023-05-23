@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/blue_1"
                         android:textFontWeight="@integer/material_motion_duration_long_1"
-                        tools:text="Color" />
+                        tools:text="@string/color" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

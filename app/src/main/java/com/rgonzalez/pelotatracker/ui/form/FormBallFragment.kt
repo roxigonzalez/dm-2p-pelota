@@ -25,9 +25,16 @@ class FormBallFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFormBallBinding.inflate(inflater, container, false)
-        val items =listOf(getString(R.string.black), getString(R.string.white), getString(R.string.green), getString(
-            R.string.gray), getString(R.string.yellow))
-        val adapter = ArrayAdapter(this.requireContext(), R.layout.item_list_colors, items )
+        val items = listOf(
+            getString(R.string.black),
+            getString(R.string.white),
+            getString(R.string.green),
+            getString(
+                R.string.gray
+            ),
+            getString(R.string.yellow)
+        )
+        val adapter = ArrayAdapter(this.requireContext(), R.layout.item_list_colors, items)
         binding.ageList.setAdapter(adapter)
         return binding.root
     }
@@ -53,11 +60,10 @@ class FormBallFragment : Fragment() {
             }
         }
     }
+
     fun setViewModel() {
         binding.viewmodel = formBallViewModel
     }
-
-
 
 
 }

@@ -11,14 +11,14 @@ import com.rgonzalez.pelotatracker.data.model.BallModel
 import com.rgonzalez.pelotatracker.repositories.BallRepository
 
 
-class BallViewModel(private val repository: BallRepository):ViewModel() {
+class BallViewModel(private val repository: BallRepository) : ViewModel() {
     private val ballModelLiveData = MutableLiveData<BallModel>()
 
     // declaring variables
     var type = MutableLiveData("")
     var color = MutableLiveData("")
 
-    fun setBallModel(ballModel: BallModel){
+    fun setBallModel(ballModel: BallModel) {
         type.value = ballModel.type
         color.value = ballModel.color
 
@@ -27,6 +27,7 @@ class BallViewModel(private val repository: BallRepository):ViewModel() {
     fun getBallModel(): LiveData<BallModel> {
         return ballModelLiveData
     }
+
     companion object {
         val Factory = viewModelFactory {
             initializer {
